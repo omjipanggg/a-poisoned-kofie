@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.maula.bem_user_management.ViewMember">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="ID"
+        android:id="@+id/textViewID"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/memberID" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/memberID"
+        android:layout_below="@+id/textViewID"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:clickable="false"
+        android:editable="false"
+        android:focusable="false"
+        android:enabled="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Name"
+        android:id="@+id/textViewName"
+        android:layout_below="@+id/memberID"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/memberID" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/memberName"
+        android:layout_below="@+id/textViewName"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Gender"
+        android:id="@+id/textViewGender"
+        android:layout_below="@+id/memberName"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/memberJK" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/memberJK"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewGender"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Birthdate"
+        android:id="@+id/textViewBday"
+        android:layout_below="@+id/memberJK"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/memberBday" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/memberBday"
+        android:focusable="false"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewBday"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Email"
+        android:id="@+id/textViewEmail"
+        android:layout_below="@+id/memberBday"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/memberBday" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/memberEmail"
+        android:layout_below="@+id/textViewEmail"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Phone"
+        android:id="@+id/textViewPhone"
+        android:layout_below="@+id/memberEmail"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/memberPhone" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/memberPhone"
+        android:layout_below="@+id/textViewPhone"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/memberEmail" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/btnUpdate"
+        android:layout_below="@+id/memberPhone"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/btnDelete"
+        android:layout_below="@+id/memberPhone"
+        android:layout_toStartOf="@+id/btnUpdate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Home"
+        android:id="@+id/btnHome"
+        android:layout_alignBottom="@+id/btnDelete"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/btnDelete"
+        android:layout_alignTop="@+id/btnDelete"
+        android:gravity="center_vertical" />
+
+</RelativeLayout>
