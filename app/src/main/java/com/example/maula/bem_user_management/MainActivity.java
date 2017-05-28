@@ -22,10 +22,10 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, RadioGroup.OnCheckedChangeListener {
 
-    private Button btnAdd, btnReset;
+    private Button btnAdd;
     private EditText name, sex, birthDate, email, phone, sid;
-    private RadioGroup radioSex;
-    private RadioButton rdM, rdF;
+    protected RadioGroup radioSex;
+    private RadioButton rdM;
     private TextView viewAll;
     private int y, m, d;
     private static final int DIALOG_ID = 0;
@@ -39,13 +39,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         name = (EditText) findViewById(R.id.editName);
         radioSex = (RadioGroup) findViewById(R.id.radioSex);
         rdM = (RadioButton) findViewById(R.id.radioMale);
-        rdF = (RadioButton) findViewById(R.id.radioFemale);
         birthDate = (EditText) findViewById(R.id.editBday);
         email = (EditText) findViewById(R.id.editEmail);
         phone = (EditText) findViewById(R.id.editPhone);
         viewAll = (TextView) findViewById(R.id.btnView);
         btnAdd = (Button) findViewById(R.id.btnAdd);
-        btnReset = (Button) findViewById(R.id.btnReset);
 
         final Calendar cal = Calendar.getInstance();
         y = cal.get(Calendar.YEAR);
@@ -56,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         viewAll.setOnClickListener(this);
         birthDate.setOnClickListener(this);
         btnAdd.setOnClickListener(this);
-        btnReset.setOnClickListener(this);
     }
 
      @Override
@@ -73,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
          m = monthOfYear;
          d = dayOfMonth;
          String dateStr = year + "/" + (monthOfYear + 1) + "/" + dayOfMonth;
-//       Toast.makeText(MainActivity.this, y + "/" + (m+1) + "/" + d, Toast.LENGTH_LONG).show();
+//       Toast.makeText(MainActivity.this, dateStr, Toast.LENGTH_LONG).show();
          birthDate.setText(dateStr);
          }
      };
@@ -134,10 +131,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
              Log.d("Add", "Adding a new member");
              addMember();
              clearText();
-         } else if (v == btnReset) {
-             Log.d("Reset", "Clearing the fields");
-             clearText();
-         } else {}
+         } else { /* leave it blank already */ }
      }
 
      private void clearText() {
@@ -162,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
              if (btn.getId() == R.id.radioFemale)
              {
                  temp = "P";
-             } else {}
+             } else { /* no need logic */ }
 
              if (btn.getId() == checkedId) {
                  gender = temp;

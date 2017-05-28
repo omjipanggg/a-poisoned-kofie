@@ -243,7 +243,6 @@ public class ViewMember extends AppCompatActivity implements View.OnClickListene
                 askDelete();
                 break;
             default:
-                // Do nothing
                 break;
         }
     }

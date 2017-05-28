@@ -19,6 +19,6 @@
         android:text="Name"
         android:id="@+id/showName"
         android:layout_toRightOf="@+id/showID"
-        android:gravity="left|center" />
+        android:gravity="left|center_vertical|center|right" />
 
 </LinearLayout>
